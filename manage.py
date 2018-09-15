@@ -2,9 +2,10 @@
 
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
-from app import app
-from exts import db
-from models import User
+from zhiliao import app
+from zhiliao.exts import db
+from zhiliao.main.models import *
+from zhiliao.auth.models import *
 
 manager = Manager(app)
 migrate = Migrate(app, db)
