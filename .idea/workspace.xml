@@ -50,6 +50,7 @@
           <entry key="gitignore" value="4" />
           <entry key="html" value="57" />
           <entry key="js" value="1" />
+          <entry key="mako" value="1" />
           <entry key="py" value="118" />
         </counts>
       </usages-collector>
@@ -59,6 +60,7 @@
           <entry key="Git file" value="4" />
           <entry key="HTML" value="57" />
           <entry key="JavaScript" value="1" />
+          <entry key="Mako" value="1" />
           <entry key="Python" value="118" />
         </counts>
       </usages-collector>
@@ -69,9 +71,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+            <state relative-caret-position="22">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/migrations/script.py.mako">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-194" />
           </provider>
         </entry>
       </file>
@@ -600,10 +609,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/script.py.mako">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        <state relative-caret-position="22">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
         </state>
       </provider>
     </entry>
