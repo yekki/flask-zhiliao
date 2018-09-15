@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}详细{% endblock %}
+{% block main %}
+    <h3 class="page-title">{{question.title}}</h3>
+    <p class="question-detail-info">
+        <span>作者：{{question.author.username}}</span>
+        <span>时间：{{question.create_time}}</span>
+    </p>
+    <hr>
+    <p class="question-content">{{question.content}}</p>
+    <hr>
+
+    {{utils.flashed_messages(container=False, dismissible=True, default_category='error')}}
+
+    <h4>评论({{question.comments|count}})：</h4>
+
+    <form action="{{url_for('main.comment')}}" method="POST">
+        <div class="form-group">
+            {{form.hidden_tag()}}
+            {{ wtf.form_field(form.content, form_type='inline', placeholder='请填写评论') }}
+            {{ wtf.form_field(form.question_id, form_type='inline', type='hidden', value=question.id) }}
+        </div>
+        <div class="form-group" style="text-align: right">
+            {{ wtf.form_field(form.submit, class='btn btn-primary') }}
+        </div>
+    </form>
+    <ul class="comment-list">
+        {% for comment in question.comments %}
+        <li>
+            <div class="user-info">
+                <img src="{{url_for('static', filename='images/logo.png')}}" alt="" class="avatar">
+                <span class="username">{{comment.author.username}}</span>
+                <span class="create-time">{{comment.create_time}}</span>
+            </div>
+            <p class="comment-content">{{comment.content}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
